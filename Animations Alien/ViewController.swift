@@ -47,19 +47,19 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         
-        alienImage.alpha = 0
+        alienImage.frame = CGRectMake(100, 20, 0, 0)
+    
     }
     
     override func viewDidAppear(animated: Bool) {
         
         UIView.animateWithDuration(1) {
             
-            self.alienImage.alpha = 1
-            
-            
-            
-        }
+            self.alienImage.frame = CGRectMake(100, 20, 100, 200)
         
+        }
+    
+            
     }
 
 }
