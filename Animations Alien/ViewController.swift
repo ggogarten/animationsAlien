@@ -47,15 +47,14 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         
-        alienImage.center = CGPointMake(alienImage.center.x - 400, alienImage.center.y)
-        
+        alienImage.alpha = 0
     }
     
     override func viewDidAppear(animated: Bool) {
         
         UIView.animateWithDuration(1) {
             
-            self.alienImage.center = CGPointMake(self.alienImage.center.x + 400, self.alienImage.center.y)
+            self.alienImage.alpha = 1
             
             
             
