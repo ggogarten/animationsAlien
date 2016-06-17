@@ -10,13 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var counter = 1
     
     @IBOutlet weak var alienImage: UIImageView!
     
     
     @IBAction func updateImage(sender: AnyObject) {
         
-        alienImage.image = UIImage(named: "frame2.png")
+        if counter == 5 {
+            
+            counter = 1
+            
+        } else {
+        
+        counter = counter + 1
+        
+        }
+        
+        
+        alienImage.image = UIImage(named: "frame\(counter).png")
         
         
     }
