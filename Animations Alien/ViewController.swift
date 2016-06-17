@@ -14,12 +14,26 @@ class ViewController: UIViewController {
     
     var timer = NSTimer()
     
+    var isAnimating = true
+    
     @IBOutlet weak var alienImage: UIImageView!
     
     
     @IBAction func updateImage(sender: AnyObject) {
         
-        
+        if isAnimating == true {
+            
+            timer.invalidate()
+            
+            isAnimating = false
+            
+        } else {
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("doAnimation"), userInfo: nil, repeats: true)
+
+            isAnimating = true
+            
+        }
         
     }
     
